@@ -1,0 +1,51 @@
+﻿<Window x:Class="ISystem.def"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISystem"
+        mc:Ignorable="d"
+        Title="Add Or Remove Items" Height="387" Width="549" WindowStartupLocation="CenterScreen" Icon="diamond-512.png">
+
+
+
+    <Grid Margin="10,-25,-8,4">
+        <ComboBox x:Name="cmb_def_Item" HorizontalAlignment="Left" Margin="170,224,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.466,-1.332" SelectionChanged="ItemBox_SelectionChanged"/>
+        <Label x:Name="label" Content="Items List" HorizontalAlignment="Left" Margin="89,221,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.665,1.522"/>
+        <Button x:Name="btn_def_Add" Content="Add" HorizontalAlignment="Left" Margin="67,51,0,0" VerticalAlignment="Top" Width="75" Click="AddButton_Click"/>
+        <Button x:Name="btn_def_EditItem" Content="Edit" HorizontalAlignment="Left" Margin="349,224,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="EditItem_Click"/>
+        <Button x:Name="btn_def_Delete" Content="Delete" HorizontalAlignment="Left" Margin="445,224,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="btn_def_Delete_Click"/>
+        <Label x:Name="label1" Content="Choose item to edit or delete" HorizontalAlignment="Left" Margin="155,194,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.172"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="tbx_def_IName" HorizontalAlignment="Left" Height="23" Margin="50,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="tbx_def_IDesc" HorizontalAlignment="Left" Height="24" Margin="185,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="tbx_def_Cost" HorizontalAlignment="Left" Height="23" Margin="320,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" TextChanged="CostonAddChange"/>
+        <Label x:Name="item_name" Content="Item Name" HorizontalAlignment="Left" Margin="50,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.75,-0.326"/>
+        <Label x:Name="label3" Content="Item Description" HorizontalAlignment="Left" Margin="188,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.681,-4.5"/>
+        <Label x:Name="label4" Content="Cost" HorizontalAlignment="Left" Margin="322,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="-5.111,-1.826"/>
+        <Label x:Name="label2" Content="Add an Item" HorizontalAlignment="Left" Margin="67,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.931,-7.348"/>
+        <Button x:Name="btn_def_Save" Content="Save" HorizontalAlignment="Left" Margin="365,145,0,0" VerticalAlignment="Top" Width="75" Click="SaveADD_Click"/>
+
+        <TextBlock x:Name="tblk_def_CostBad" HorizontalAlignment="Left" Margin="365,74,0,0" TextWrapping="Wrap" Text="Cost Invalid!" VerticalAlignment="Top" Width="92" Foreground="Red" Visibility="Hidden"/>
+        <TextBox x:Name="tbx_def_IName1" HorizontalAlignment="Left" Height="23" Margin="140,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" RenderTransformOrigin="0.5,0.565"/>
+        <TextBox x:Name="tbx_def_IDesc1" HorizontalAlignment="Left" Height="23" Margin="265,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="tbx_def_Cost1" HorizontalAlignment="Left" Height="23" Margin="390,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" TextChanged="CostValidate"/>
+        <Label x:Name="label5" Content="Item name" HorizontalAlignment="Left" Margin="140,261,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="Item description" HorizontalAlignment="Left" Margin="265,264,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label7" Content="Cost" HorizontalAlignment="Left" Margin="390,264,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_def_EditSave" Content="Save" HorizontalAlignment="Left" Margin="325,337,0,0" VerticalAlignment="Top" Width="75" Click="btn_def_EditSave_Click"/>
+        <TextBox x:Name="tbx_def_inumber" HorizontalAlignment="Left" Height="23" Margin="15,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="label5_Copy" Content="Item Number" HorizontalAlignment="Left" Margin="15,261,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblk_def_BadCost" HorizontalAlignment="Left" Margin="415,314,0,0" TextWrapping="Wrap" Text="Invalid Cost!" VerticalAlignment="Top" Foreground="Red" Visibility="Hidden"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="4" Margin="15,181,0,0" VerticalAlignment="Top" Width="495" Background="Black"/>
+    </Grid>
+
+</Window>
